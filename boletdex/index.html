@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BoletDex · Bolets i micologia</title>
+  <meta name="description" content="BoletDex t'ajuda a identificar bolets, guardar troballes, consultar mapes de presència i completar el teu àlbum." />
+  <meta name="theme-color" content="#F3E8C9" />
+  <meta property="og:title" content="BoletDex · Bolets i micologia" />
+  <meta property="og:description" content="Identifica bolets, guarda troballes, consulta mapes i completa el teu àlbum." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="app-icon.png" />
+  <style>
+    :root {
+      --bg: #f3e8c9;
+      --surface: rgba(255,255,255,.68);
+      --text: #1f2b1e;
+      --muted: #5e695d;
+      --green: #254d32;
+      --green-2: #376947;
+      --line: rgba(31,43,30,.12);
+      --shadow: 0 16px 50px rgba(42, 58, 36, .12);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 15% 5%, rgba(255,255,255,.75), transparent 28rem),
+        linear-gradient(180deg, #f6ecd1 0%, #eee0b9 100%);
+    }
+    a { color: inherit; }
+    .wrap { width: min(1080px, calc(100% - 32px)); margin: 0 auto; }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px 0;
+    }
+    .brand { display: flex; gap: 12px; align-items: center; font-weight: 800; letter-spacing: -.02em; }
+    .brand img { width: 42px; height: 42px; border-radius: 12px; box-shadow: 0 7px 18px rgba(37,77,50,.16); }
+    .lang { display: flex; gap: 6px; padding: 4px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255,255,255,.5); }
+    .lang button { border: 0; background: transparent; color: var(--muted); font: inherit; font-size: 13px; font-weight: 700; padding: 7px 10px; border-radius: 999px; cursor: pointer; }
+    .lang button.active { background: var(--green); color: #fff; }
+    .hero {
+      display: grid;
+      grid-template-columns: 1.15fr .85fr;
+      gap: 60px;
+      align-items: center;
+      padding: 72px 0 92px;
+    }
+    .eyebrow { display: inline-flex; align-items: center; gap: 8px; color: var(--green); font-weight: 800; font-size: 14px; margin-bottom: 18px; }
+    h1 { font-size: clamp(44px, 7vw, 76px); line-height: .98; letter-spacing: -.055em; margin: 0 0 22px; max-width: 760px; }
+    .lead { font-size: clamp(18px, 2vw, 22px); line-height: 1.55; color: var(--muted); max-width: 650px; margin: 0 0 30px; }
+    .stores { display: flex; flex-wrap: wrap; gap: 12px; margin: 0 0 18px; }
+    .store {
+      display: inline-flex; align-items: center; gap: 12px;
+      text-decoration: none; background: #151915; color: white;
+      border-radius: 14px; padding: 11px 18px 11px 14px;
+      min-width: 190px; transition: transform .18s ease, opacity .18s ease;
+    }
+    .store:hover { transform: translateY(-2px); opacity: .94; }
+    .store .icon { width: 28px; height: 28px; display: grid; place-items: center; font-size: 22px; }
+    .store small { display: block; opacity: .72; font-size: 10px; line-height: 1; margin-bottom: 3px; }
+    .store strong { font-size: 17px; line-height: 1; }
+    .note { font-size: 13px; color: var(--muted); }
+    .visual { display: flex; justify-content: center; }
+    .app-card {
+      width: min(360px, 88vw); aspect-ratio: 1 / 1.04;
+      border-radius: 36px; padding: 34px;
+      background: linear-gradient(145deg, rgba(255,255,255,.78), rgba(255,255,255,.36));
+      border: 1px solid rgba(255,255,255,.68);
+      box-shadow: var(--shadow);
+      display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center;
+      backdrop-filter: blur(12px);
+    }
+    .app-card img { width: 175px; height: 175px; border-radius: 38px; box-shadow: 0 24px 45px rgba(37,77,50,.2); margin-bottom: 22px; }
+    .app-card h2 { margin: 0; font-size: 28px; letter-spacing: -.03em; }
+    .app-card p { margin: 8px 0 0; color: var(--muted); }
+    .features { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; padding-bottom: 80px; }
+    .feature { padding: 22px; border: 1px solid var(--line); border-radius: 22px; background: var(--surface); }
+    .feature span { font-size: 28px; }
+    .feature h3 { margin: 12px 0 7px; font-size: 17px; }
+    .feature p { margin: 0; color: var(--muted); font-size: 14px; line-height: 1.5; }
+    footer { border-top: 1px solid var(--line); padding: 26px 0 38px; color: var(--muted); font-size: 13px; }
+    footer .row { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+    footer a { text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+    @media (max-width: 800px) {
+      .hero { grid-template-columns: 1fr; gap: 42px; padding: 48px 0 66px; }
+      .visual { order: -1; }
+      .app-card { width: min(310px, 76vw); }
+      .app-card img { width: 145px; height: 145px; }
+      .features { grid-template-columns: 1fr 1fr; }
+      h1 { text-align: center; }
+      .copy { text-align: center; }
+      .lead { margin-inline: auto; }
+      .stores { justify-content: center; }
+    }
+    @media (max-width: 520px) {
+      header { padding-top: 16px; }
+      .brand span { font-size: 15px; }
+      .features { grid-template-columns: 1fr; }
+      .store { width: 100%; justify-content: center; }
+      .hero { padding-top: 30px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand"><img src="app-icon.png" alt="BoletDex"><span>BoletDex</span></div>
+      <div class="lang" aria-label="Idioma">
+        <button id="caBtn" class="active" type="button">CAT</button>
+        <button id="esBtn" type="button">ES</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="copy">
+          <div class="eyebrow" data-ca="🍄 Bolets, bosc i micologia" data-es="🍄 Bolets, bosque y micología">🍄 Bolets, bosc i micologia</div>
+          <h1 data-ca="El teu món boletaire, en una sola app." data-es="Tu mundo micológico, en una sola app.">El teu món boletaire, en una sola app.</h1>
+          <p class="lead" data-ca="Identifica bolets, guarda les teves troballes, consulta mapes de presència i completa el teu àlbum d'espècies." data-es="Identifica hongos, guarda tus hallazgos, consulta mapas de presencia y completa tu álbum de especies.">Identifica bolets, guarda les teves troballes, consulta mapes de presència i completa el teu àlbum d'espècies.</p>
+
+          <div class="stores">
+            <a class="store" id="iosLink" href="#" aria-label="App Store">
+              <span class="icon"></span>
+              <span><small data-ca="Disponible a" data-es="Disponible en">Disponible a</small><strong>App Store</strong></span>
+            </a>
+            <a class="store" id="androidLink" href="#" aria-label="Google Play">
+              <span class="icon">▶</span>
+              <span><small data-ca="Disponible a" data-es="Disponible en">Disponible a</small><strong>Google Play</strong></span>
+            </a>
+          </div>
+          <div class="note" data-ca="Disponible per a iPhone i Android." data-es="Disponible para iPhone y Android.">Disponible per a iPhone i Android.</div>
+        </div>
+
+        <div class="visual">
+          <div class="app-card">
+            <img src="app-icon.png" alt="Icona de BoletDex">
+            <h2>BoletDex</h2>
+            <p data-ca="Identifica · Descobreix · Col·lecciona" data-es="Identifica · Descubre · Colecciona">Identifica · Descobreix · Col·lecciona</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="features">
+        <article class="feature"><span>📷</span><h3 data-ca="Identificació" data-es="Identificación">Identificació</h3><p data-ca="Afegeix fotos i obtén una identificació orientativa de l'espècie." data-es="Añade fotos y obtén una identificación orientativa de la especie.">Afegeix fotos i obtén una identificació orientativa de l'espècie.</p></article>
+        <article class="feature"><span>🗺️</span><h3 data-ca="Mapes" data-es="Mapas">Mapes</h3><p data-ca="Consulta presències i desa els teus racons i troballes de forma privada." data-es="Consulta presencias y guarda tus rincones y hallazgos de forma privada.">Consulta presències i desa els teus racons i troballes de forma privada.</p></article>
+        <article class="feature"><span>🍄</span><h3 data-ca="Àlbum" data-es="Álbum">Àlbum</h3><p data-ca="Descobreix espècies i completa la teva col·lecció a mesura que surts al bosc." data-es="Descubre especies y completa tu colección a medida que sales al bosque.">Descobreix espècies i completa la teva col·lecció a mesura que surts al bosc.</p></article>
+        <article class="feature"><span>🌲</span><h3 data-ca="Sortides" data-es="Salidas">Sortides</h3><p data-ca="Guarda el record de cada sortida amb ubicacions, fotos i notes." data-es="Guarda el recuerdo de cada salida con ubicaciones, fotos y notas.">Guarda el record de cada sortida amb ubicacions, fotos i notes.</p></article>
+      </section>
+    </main>
+
+    <footer>
+      <div class="row">
+        <span>© 2026 SERPERHER · BoletDex</span>
+        <span><a href="mailto:boletdex@serperher.com">boletdex@serperher.com</a></span>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    const STORE_URLS = {
+      ios: '#',      // TODO: posa aquí l'enllaç real de l'App Store
+      android: '#'   // TODO: posa aquí l'enllaç real de Google Play
+    };
+
+    document.getElementById('iosLink').href = STORE_URLS.ios;
+    document.getElementById('androidLink').href = STORE_URLS.android;
+
+    const caBtn = document.getElementById('caBtn');
+    const esBtn = document.getElementById('esBtn');
+
+    function setLang(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-ca][data-es]').forEach(el => {
+        el.textContent = lang === 'ca' ? el.dataset.ca : el.dataset.es;
+      });
+      caBtn.classList.toggle('active', lang === 'ca');
+      esBtn.classList.toggle('active', lang === 'es');
+      localStorage.setItem('boletdex-lang', lang);
+    }
+
+    caBtn.addEventListener('click', () => setLang('ca'));
+    esBtn.addEventListener('click', () => setLang('es'));
+
+    const stored = localStorage.getItem('boletdex-lang');
+    const browser = (navigator.language || '').toLowerCase();
+    setLang(stored || (browser.startsWith('ca') ? 'ca' : 'es'));
+  </script>
+</body>
+</html>
