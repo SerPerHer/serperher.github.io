@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Política de privacidad · BoletDex</title>
+
+  <meta
+    name="description"
+    content="Política de privacidad de BoletDex: qué datos recopila la app, para qué los usa, con quién los comparte y cómo ejercer tus derechos."
+  />
+
+  <meta name="theme-color" content="#F3E8C9" />
+
+  <link rel="icon" href="app-icon.png" />
+
+  <style>
+    :root {
+      --bg: #f3e8c9;
+      --surface: rgba(255, 255, 255, .68);
+      --text: #1f2b1e;
+      --muted: #5e695d;
+      --green: #254d32;
+      --green-2: #376947;
+      --line: rgba(31, 43, 30, .12);
+      --shadow: 0 16px 50px rgba(42, 58, 36, .12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      color: var(--text);
+
+      background:
+        radial-gradient(
+          circle at 15% 5%,
+          rgba(255, 255, 255, .75),
+          transparent 28rem
+        ),
+        linear-gradient(
+          180deg,
+          #f6ecd1 0%,
+          #eee0b9 100%
+        );
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .wrap {
+      width: min(1080px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px 0;
+    }
+
+    .brand {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+
+      font-weight: 800;
+      letter-spacing: -.02em;
+
+      text-decoration: none;
+    }
+
+    .brand img {
+      width: 42px;
+      height: 42px;
+
+      border-radius: 12px;
+
+      box-shadow:
+        0 7px 18px rgba(37, 77, 50, .16);
+    }
+
+    .policy {
+      max-width: 760px;
+
+      padding: 40px 0 72px;
+    }
+
+    .back {
+      display: inline-block;
+
+      color: var(--green);
+
+      font-weight: 700;
+      font-size: 14px;
+
+      text-decoration: none;
+
+      margin-bottom: 18px;
+    }
+
+    .back:hover {
+      text-decoration: underline;
+    }
+
+    .policy h1 {
+      font-size: clamp(34px, 5vw, 52px);
+
+      line-height: 1.04;
+      letter-spacing: -.045em;
+
+      margin: 0 0 12px;
+    }
+
+    .updated {
+      color: var(--muted);
+
+      font-size: 14px;
+
+      margin: 0 0 32px;
+    }
+
+    .policy h2 {
+      font-size: 22px;
+      letter-spacing: -.02em;
+
+      color: var(--green);
+
+      margin: 40px 0 12px;
+      padding-top: 22px;
+
+      border-top: 1px solid var(--line);
+    }
+
+    .policy h3 {
+      font-size: 17px;
+
+      margin: 26px 0 8px;
+    }
+
+    .policy h4 {
+      font-size: 15px;
+
+      color: var(--green-2);
+
+      margin: 20px 0 6px;
+    }
+
+    .policy p,
+    .policy li {
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    .policy p {
+      margin: 0 0 14px;
+    }
+
+    .policy ul {
+      margin: 0 0 16px;
+      padding-left: 22px;
+    }
+
+    .policy li {
+      margin-bottom: 6px;
+    }
+
+    .policy li p {
+      margin: 8px 0 0;
+    }
+
+    .policy a {
+      color: var(--green);
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+
+      padding: 26px 0 38px;
+
+      color: var(--muted);
+
+      font-size: 13px;
+    }
+
+    footer .row {
+      display: flex;
+      justify-content: space-between;
+
+      gap: 16px;
+
+      flex-wrap: wrap;
+    }
+
+    footer a {
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 520px) {
+
+      header {
+        padding-top: 16px;
+      }
+
+      .brand span {
+        font-size: 15px;
+      }
+
+      .policy {
+        padding-top: 24px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="wrap">
+
+    <header>
+
+      <a class="brand" href="./">
+        <img
+          src="app-icon.png"
+          alt="BoletDex"
+        >
+        <span>BoletDex</span>
+      </a>
+
+    </header>
+
+
+    <main class="policy">
+
+      <a class="back" href="./">← Volver a BoletDex</a>
+
+      <h1>Política de privacidad de BoletDex</h1>
+
+      <p class="updated">Última actualización: 6 de octubre de 2026</p>
+
+      <p>Esta Política de privacidad explica cómo BoletDex recopila, utiliza, almacena y protege la información de los usuarios.</p>
+
+      <p>BoletDex es una aplicación móvil para registrar salidas boletaires, guardar hallazgos de setas, consultar un catálogo, completar un álbum personal, utilizar mapas y, en su caso, identificar setas mediante servicios de inteligencia artificial.</p>
+
+      <p>Al utilizar BoletDex, tus datos se tratarán conforme a las finalidades y bases jurídicas indicadas en esta Política de privacidad. Cuando una función opcional requiera tu consentimiento, se solicitará de forma específica antes de activarla y podrás retirarlo posteriormente.</p>
+
+      <h2>1. Responsable de la aplicación</h2>
+
+      <p>
+        Responsable: Sergio Pérez Hernando<br>
+        Contacto: boletdex@serperher.com<br>
+        Aplicación: BoletDex
+      </p>
+
+      <h2>2. Datos que podemos recopilar</h2>
+
+      <p>BoletDex puede recopilar los siguientes datos, según las funciones que utilices:</p>
+
+      <h3>Datos de cuenta</h3>
+
+      <p>Si inicias sesión en la app, podemos recopilar:</p>
+
+      <ul>
+        <li>Identificador de usuario.</li>
+        <li>Nombre o alias asociado a la cuenta.</li>
+        <li>Dirección de correo electrónico.</li>
+        <li>Imagen de perfil, si el proveedor de inicio de sesión la facilita.</li>
+      </ul>
+
+      <p>Estos datos se utilizan para crear y gestionar tu cuenta, guardar tu progreso y sincronizar tu información entre dispositivos.</p>
+
+      <h3>Datos de ubicación</h3>
+
+      <p>BoletDex puede solicitar acceso a tu ubicación mientras utilizas la aplicación para mostrar tu posición y centrar el mapa cuando tú solicites esta función.</p>
+
+      <p>BoletDex no guarda automáticamente tu posición GPS al utilizar el mapa. Las ubicaciones privadas o rincones que decidas guardar corresponden a puntos seleccionados expresamente por ti en el mapa.</p>
+
+      <p>La ubicación actual también puede utilizarse temporalmente para mostrar información sobre especies que podrían encontrarse en la zona en la que te encuentras. Esta consulta no implica que tu posición se guarde automáticamente en tu cuenta.</p>
+
+      <p>Las salidas y hallazgos pueden relacionarse con zonas aproximadas o con rincones privados que hayas creado previamente.</p>
+
+      <p>La ubicación de tus hallazgos no se muestra públicamente a otros usuarios, salvo que en el futuro se añada una función de compartir y tú decidas usarla expresamente.</p>
+
+      <p>Puedes desactivar los permisos de ubicación desde los ajustes de tu dispositivo, aunque algunas funciones de la app podrían dejar de funcionar correctamente.</p>
+
+      <h3>Fotografías e imágenes</h3>
+
+      <p>BoletDex puede permitirte subir o guardar fotografías de setas, salidas o hallazgos.</p>
+
+      <p>Estas imágenes pueden utilizarse para:</p>
+
+      <ul>
+        <li>Guardar tu historial personal de hallazgos.</li>
+        <li>Mostrar tus setas descubiertas en el álbum.</li>
+        <li>Asociar fotos a una salida.</li>
+        <li>Enviar una imagen a un servicio externo de identificación de setas, si utilizas esa función.</li>
+      </ul>
+
+      <h4>Tratamiento de fotografías utilizadas para la identificación</h4>
+
+      <p>Cuando utilizas la función de identificación mediante inteligencia artificial, las fotografías seleccionadas se transmiten al proveedor tecnológico FlowerChecker s.r.o., que opera bajo la marca Kindwise y presta el servicio mushroom.id.</p>
+
+      <p>BoletDex puede procesar temporalmente estas fotografías en su infraestructura exclusivamente para gestionar la solicitud. Las copias temporales almacenadas por BoletDex se eliminan una vez finalizado el proceso, tanto si la identificación tiene éxito como si falla. Esto no implica necesariamente su eliminación inmediata de los sistemas de Kindwise. Según las condiciones aplicadas actualmente por Kindwise, las fotografías, consultas y resultados pueden permanecer accesibles a través de su API durante un periodo de hasta seis meses. Los datos personales que puedan contener son anonimizados por Kindwise después de ese periodo. Las condiciones de Kindwise también contemplan que las fotografías enviadas puedan ser utilizadas y modificadas para mejorar y desarrollar sus servicios y modelos de inteligencia artificial, incluso con fines comerciales. Kindwise puede utilizar las fotografías como parte de resultados proporcionados a otros clientes y compartirlas bajo una licencia CC-BY-SA 4.0 o posterior. Kindwise indica que difumina los rostros humanos antes de reutilizar las imágenes. No debes enviar fotografías que contengan personas identificables, matrículas, domicilios, documentos personales, ubicaciones sensibles u otra información privada. También debes disponer de los derechos y autorizaciones necesarios sobre cualquier fotografía enviada.</p>
+
+      <p>Las fotografías que decidas guardar expresamente en tus hallazgos, salidas o álbum personal permanecerán almacenadas en BoletDex hasta que las elimines o solicites la eliminación de tu cuenta.</p>
+
+      <p>Antes del primer envío de fotografías a Kindwise, BoletDex mostrará información resumida sobre este tratamiento y solicitará autorización expresa para compartir las imágenes con dicho proveedor. Si el usuario no autoriza el envío, las fotografías no se transmitirán y podrá seguir utilizando el resto de funciones de BoletDex.</p>
+
+      <h4>Resultados automatizados</h4>
+
+      <p>Las identificaciones proporcionadas por BoletDex y Kindwise se generan mediante sistemas automatizados de inteligencia artificial y expresan únicamente una estimación probabilística.</p>
+
+      <p>No constituyen una identificación profesional ni garantizan que una seta sea comestible o segura. No deben utilizarse como única fuente para consumir, manipular o administrar una seta a personas o animales.</p>
+
+      <p>BoletDex no adopta decisiones automatizadas que produzcan efectos jurídicos o similares sobre el usuario.</p>
+
+      <h3>Datos de uso de la app</h3>
+
+      <p>Podemos recopilar datos técnicos y de uso, como:</p>
+
+      <ul>
+        <li>Funciones utilizadas dentro de la app.</li>
+        <li>Errores, fallos o cierres inesperados.</li>
+        <li>Información técnica del dispositivo.</li>
+        <li>Identificadores técnicos y, cuando corresponda y exista la autorización necesaria, identificadores publicitarios.</li>
+        <li>Datos necesarios para analítica, seguridad, rendimiento o publicidad, de acuerdo con las preferencias y consentimientos aplicables.</li>
+      </ul>
+
+      <p>Estos datos nos ayudan a mejorar la estabilidad, detectar errores, prevenir abusos y mantener la app.</p>
+
+      <h3>Datos de compras</h3>
+
+      <p>Si compras BoletDex Pro, créditos de identificación u otros productos digitales, el pago se procesa mediante:</p>
+
+      <ul>
+        <li>Google Play Billing en dispositivos Android.</li>
+        <li>Apple App Store y StoreKit en dispositivos Apple.</li>
+      </ul>
+
+      <p>BoletDex y RevenueCat pueden recibir y almacenar información necesaria para validar y gestionar la compra, como:</p>
+
+      <ul>
+        <li>Producto adquirido.</li>
+        <li>Plataforma en la que se realizó la compra.</li>
+        <li>Estado y fecha de la transacción.</li>
+        <li>Identificador de transacción o recibo.</li>
+        <li>Estado de reembolso o revocación.</li>
+        <li>Créditos o beneficios asociados a tu cuenta.</li>
+      </ul>
+
+      <p>BoletDex no recibe ni almacena los datos completos de tu tarjeta bancaria. El pago es gestionado directamente por Google Play o Apple.</p>
+
+      <h3>Datos de medición publicitaria y atribución</h3>
+
+      <p>Si autorizas la opción de <strong>“Medición publicitaria”</strong>, BoletDex puede recopilar y compartir determinados eventos técnicos y de uso con plataformas publicitarias para medir si una campaña ha generado una instalación, una acción dentro de la app o una compra.</p>
+
+      <p>Estos datos pueden incluir:</p>
+
+      <ul>
+        <li>Activación o apertura de la aplicación.</li>
+        <li>Visualización de determinados contenidos, como la ficha de una especie.</li>
+        <li>Finalización de un registro.</li>
+        <li>Progreso dentro de la aplicación, como alcanzar un nivel o desbloquear un logro.</li>
+        <li>Consumo de créditos de identificación.</li>
+        <li>Información relativa a compras o conversiones, como el producto adquirido, el importe, la moneda o el estado de la transacción.</li>
+        <li>Identificadores técnicos o de atribución generados por los proveedores publicitarios, cuando sean necesarios para relacionar una conversión con una campaña.</li>
+      </ul>
+
+      <p>Actualmente, BoletDex utiliza <strong>Meta Ads</strong> para esta finalidad. La aplicación puede enviar eventos mediante las herramientas de Meta para aplicaciones y RevenueCat puede transmitir a Meta determinados eventos de compra mediante la API de conversiones.</p>
+
+      <p>Para esta finalidad, BoletDex <strong>no envía a Meta tu nombre, correo electrónico ni número de teléfono</strong>.</p>
+
+      <p>En dispositivos Apple, el uso de Meta para medición publicitaria está sujeto además a la autorización de App Tracking Transparency (ATT) cuando así lo requieren las reglas de Apple.</p>
+
+      <p>Puedes aceptar o rechazar la medición publicitaria y cambiar posteriormente tu decisión desde <strong>Configuración → Medición publicitaria</strong>.</p>
+
+      <h2>3. Para qué usamos tus datos</h2>
+
+      <p>Utilizamos tus datos para:</p>
+
+      <ul>
+        <li>Crear y gestionar tu cuenta.</li>
+        <li>Guardar tus salidas, hallazgos, fotografías y progreso.</li>
+        <li>Mostrar tu álbum personal de setas.</li>
+        <li>Mostrar mapas y ubicaciones relacionadas con tus registros.</li>
+        <li>Ofrecer funciones de identificación de setas mediante servicios externos.</li>
+        <li>Gestionar compras, créditos, límites de uso y funciones Pro.</li>
+        <li>Mostrar anuncios, si corresponde.</li>
+        <li>Medir el rendimiento de la app.</li>
+        <li>Detectar errores y mejorar la estabilidad.</li>
+        <li>Prevenir fraude, abusos o usos indebidos.</li>
+        <li>Cumplir obligaciones legales o requisitos de plataformas de distribución como Google Play y Apple App Store.</li>
+        <li>Medir el rendimiento de campañas publicitarias y determinar, de forma atribuida o agregada, si una campaña ha generado instalaciones, registros, uso de determinadas funciones o compras.</li>
+        <li>Analizar y optimizar la efectividad de las campañas publicitarias cuando el usuario haya autorizado la medición correspondiente.</li>
+      </ul>
+
+      <h2>4. Bases jurídicas del tratamiento</h2>
+
+      <p>El tratamiento de los datos se basa, según la finalidad, en:</p>
+
+      <ul>
+        <li>Ejecución de la relación contractual y prestación del servicio: para crear y gestionar tu cuenta, sincronizar datos, guardar hallazgos y salidas, mostrar el mapa, gestionar compras y créditos y procesar identificaciones solicitadas por ti.</li>
+        <li>Consentimiento: para la analítica opcional, la personalización publicitaria, la medición y atribución de campañas publicitarias y, cuando corresponda, el uso de identificadores publicitarios u otras tecnologías opcionales. Estas finalidades pueden requerir decisiones de consentimiento distintas dentro de BoletDex. Puedes retirar o modificar tus decisiones posteriormente desde los ajustes de la aplicación o del dispositivo.</li>
+        <li>En dispositivos Apple, cuando una finalidad implique seguimiento entre aplicaciones o sitios web o el acceso al identificador publicitario, se solicitará además la autorización correspondiente mediante App Tracking Transparency (ATT).</li>
+        <li>Permisos del dispositivo: algunas funciones pueden requerir permisos del sistema, como ubicación o cámara. Estos permisos se solicitan en el momento en que se necesita utilizar la función y pueden modificarse posteriormente desde los ajustes del dispositivo.</li>
+        <li>Interés legítimo: para garantizar la seguridad de la aplicación, prevenir fraude y abusos, resolver errores técnicos y proteger los sistemas y cuentas de los usuarios.</li>
+        <li>Cumplimiento de obligaciones legales: para conservar determinada información relacionada con compras, facturación, reclamaciones, requerimientos legales o prevención del fraude durante los plazos legalmente exigibles.</li>
+      </ul>
+
+      <h2>5. Servicios de terceros</h2>
+
+      <p>BoletDex utiliza los siguientes proveedores externos para su funcionamiento:</p>
+
+      <ul>
+        <li>Firebase / Google Cloud (Google LLC): autenticación de usuarios, base de datos, almacenamiento de archivos y funciones de servidor.</li>
+        <li>Firebase Analytics (Google LLC): estadísticas de uso agregadas de la app, solo si el usuario ha dado su consentimiento explícito en el apartado "Analítica d'ús" de Ajustes.</li>
+        <li>Google AdMob (Google LLC): publicidad. BoletDex utiliza Google User Messaging Platform (UMP) para gestionar las opciones de privacidad y consentimiento publicitario cuando corresponda.</li>
+        <li>Google Play Billing (Google LLC): procesamiento de pagos y compras dentro de la app.</li>
+        <li>Apple: inicio de sesión mediante Sign in with Apple y procesamiento de compras realizadas a través de App Store y StoreKit.</li>
+        <li>RevenueCat (RevenueCat, Inc.): gestión e intermediación de compras, validación de recibos y sincronización de derechos de compra entre dispositivos. RevenueCat recibe identificadores técnicos y datos de las transacciones, pero no los datos bancarios completos. Cuando el usuario ha autorizado la medición publicitaria, RevenueCat también puede transmitir determinados eventos de compra o conversión a plataformas publicitarias configuradas por BoletDex, actualmente Meta Ads, con la finalidad de medir la efectividad de las campañas.</li>
+        <li>Meta Platforms Ireland Limited y/o Meta Platforms, Inc., según corresponda — Meta Ads: BoletDex utiliza herramientas de Meta para medir el rendimiento de campañas publicitarias realizadas en servicios como Instagram o Facebook. Si el usuario autoriza la medición publicitaria, Meta puede recibir eventos relacionados con el uso de la aplicación y determinados identificadores técnicos de atribución. Estos datos pueden utilizarse para elaborar informes de campañas, medir conversiones y optimizar la entrega de publicidad.
+          <p>BoletDex utiliza el SDK de Meta para determinados eventos de la aplicación y la API de conversiones de Meta para determinados eventos enviados desde sistemas de servidor. Las compras pueden ser comunicadas a Meta a través de RevenueCat. BoletDex no utiliza esta integración para enviar a Meta el nombre, correo electrónico o número de teléfono del usuario.</p>
+        </li>
+        <li>Mapbox (Mapbox, Inc.): visualización de mapas.</li>
+        <li>FlowerChecker s.r.o. (marca comercial Kindwise): prestación del servicio mushroom.id para identificar posibles especies de setas mediante inteligencia artificial. Cuando el usuario utiliza esta función, se envían a Kindwise las fotografías seleccionadas y la información técnica necesaria para procesar la solicitud. Kindwise puede procesar también la dirección IP y una ubicación aproximada derivada de ella. La conservación, anonimización y posible reutilización de estas fotografías se describe en el apartado «Tratamiento de fotografías utilizadas para la identificación».</li>
+        <li>Firebase Crashlytics (Google LLC): diagnóstico de errores y cierres inesperados, mediante información técnica necesaria para identificar y resolver problemas de estabilidad de la aplicación.</li>
+      </ul>
+
+      <p>Algunos de estos proveedores pueden procesar datos fuera del Espacio Económico Europeo. Cuando un proveedor procesa datos fuera del Espacio Económico Europeo, se aplicarán las garantías previstas por la normativa de protección de datos que correspondan en cada caso, como decisiones de adecuación o cláusulas contractuales tipo.</p>
+
+      <h2>6. Compartición de datos</h2>
+
+      <p>No vendemos tus datos personales.</p>
+
+      <p>Podemos compartir datos únicamente cuando sea necesario para:</p>
+
+      <ul>
+        <li>Prestar las funciones de la app.</li>
+        <li>Utilizar los proveedores técnicos descritos en el apartado «Servicios de terceros».</li>
+        <li>Procesar compras mediante Google Play, Apple App Store y RevenueCat.</li>
+        <li>Mostrar anuncios mediante AdMob.</li>
+        <li>Medir y atribuir campañas publicitarias mediante Meta Ads cuando hayas autorizado la medición publicitaria.</li>
+        <li>Comunicar determinados eventos de compra o conversión desde RevenueCat a las plataformas publicitarias configuradas por BoletDex cuando exista el consentimiento necesario.</li>
+        <li>Cumplir obligaciones legales.</li>
+        <li>Proteger la seguridad de la app, del desarrollador o de los usuarios.</li>
+      </ul>
+
+      <h2>7. Conservación de los datos</h2>
+
+      <p>Los datos asociados a la cuenta se conservarán mientras esta permanezca activa. Cuando elimines la cuenta, se eliminarán o desvincularán los datos personales asociados, salvo aquellos que deban conservarse temporalmente por obligaciones legales, gestión de compras, prevención del fraude, resolución de reclamaciones o mantenimiento de copias de seguridad.</p>
+
+      <p>Las fotografías temporales procesadas por BoletDex exclusivamente para realizar una identificación se eliminan de la infraestructura de BoletDex al finalizar la solicitud.</p>
+
+      <p>Las fotografías enviadas a Kindwise se someten a sus propios plazos y condiciones. Según las condiciones vigentes, las fotografías, consultas y resultados pueden permanecer disponibles durante seis meses y los datos personales se anonimizan posteriormente. La eliminación de la cuenta de BoletDex no garantiza la eliminación de información que ya haya sido anonimizada o reutilizada legítimamente por Kindwise conforme a sus condiciones.</p>
+
+      <p>Los registros de compras y transacciones podrán conservarse durante el tiempo necesario para cumplir obligaciones fiscales, contables, antifraude o de defensa frente a reclamaciones.</p>
+
+      <p>Las copias de seguridad pueden conservar datos durante un periodo adicional limitado antes de su sobrescritura o eliminación definitiva.</p>
+
+      <p>Los eventos y datos enviados a proveedores externos de medición o publicidad quedan sujetos también a los plazos de conservación y políticas de dichos proveedores. La retirada del consentimiento impide que BoletDex continúe enviando nuevos datos para esa finalidad, pero no implica necesariamente la eliminación automática de datos que hayan sido tratados legítimamente con anterioridad por el proveedor correspondiente.</p>
+
+      <h2>8. Seguridad</h2>
+
+      <p>Aplicamos medidas razonables para proteger tus datos frente a accesos no autorizados, pérdida, uso indebido o alteración.</p>
+
+      <p>Aun así, ningún sistema informático es completamente seguro. No podemos garantizar una seguridad absoluta.</p>
+
+      <h2>9. Privacidad de las ubicaciones boletaires</h2>
+
+      <p>BoletDex está diseñada para que tus ubicaciones de hallazgos y salidas sean privadas.</p>
+
+      <p>No compartas capturas, fotos o publicaciones que puedan revelar zonas privadas si no quieres que otras personas conozcan tus lugares de búsqueda.</p>
+
+      <p>Si en el futuro se añaden funciones sociales o de compartir, se hará de forma opcional y bajo decisión del usuario.</p>
+
+      <h3>Programa de colaboradores del Caçador de Rovellons</h3>
+
+      <p>Si solicitas participar y te aceptamos, y además aceptas expresamente en la app el texto sobre la ubicación de tus salidas, BoletDex guardará de cada salida que inicies: tu posición GPS al iniciarla y al registrar cada níscalo con la vía rápida (una sola lectura cada vez, con su hora y su precisión; si la posición de inicio no se ha podido obtener, puedes volver a pedirla mientras dura la salida, y al finalizarla se hace una lectura más; nunca seguimiento continuo ni en segundo plano); la especie y la cantidad aproximada que indiques; si ese día buscabas níscalos, si elegiste la zona por el mapa del Caçador y cuántos encontraste en total; la hora de inicio y de final; y qué versión del mapa y de la app tenías instaladas. También guardamos los datos de tu solicitud: nombre, correo, zona, frecuencia de salidas y motivación. Estos datos son privados: no se muestran a otros usuarios ni se publican. Solo accede a ellos el equipo de BoletDex, y solo para comprobar si el mapa del Caçador acierta. Los tratamos con tu consentimiento, que puedes retirar cuando quieras desde la app, en la pantalla del programa de colaboradores; allí eliges si se borran también los datos ya guardados o si se conservan para el estudio. También puedes retirarlo, o pedir que los borremos, escribiendo a boletdex@serperher.com. Si no aceptas, puedes usar la app y hacer salidas igualmente, y no se guarda ninguno de estos datos. Los datos de cada salida se guardan 3 años desde esa salida, o menos si pides que se borren, borras esa salida o eliminas tu cuenta. La solicitud se guarda mientras tengas la cuenta, o hasta que pidas borrarla. Al eliminar tu cuenta se borran todos, también la solicitud.</p>
+
+      <h2>10. Menores de edad</h2>
+
+      <p>BoletDex no está dirigida específicamente a menores de 14 años. Cuando el tratamiento de datos personales de un menor de 14 años se base en su consentimiento, deberá constar el consentimiento de sus padres o tutores legales.</p>
+
+      <p>Si tenemos conocimiento de que se han recopilado datos personales de un menor de 14 años sin la autorización necesaria, adoptaremos las medidas razonables para eliminarlos.</p>
+
+      <p>Las personas de entre 14 y 17 años deberán utilizar la aplicación de acuerdo con la legislación aplicable y no deberán realizar compras sin las autorizaciones que correspondan.</p>
+
+      <p>Si detectamos que se han recogido datos de una persona menor de 14 años, podremos bloquear o eliminar la cuenta y los datos asociados.</p>
+
+      <h2>11. Derechos del usuario</h2>
+
+      <p>De acuerdo con el Reglamento General de Protección de Datos (RGPD) y la normativa española aplicable, puedes ejercer en cualquier momento tus derechos de acceso, rectificación, supresión, limitación del tratamiento, oposición y portabilidad de tus datos, contactando con <a href="mailto:boletdex@gmail.com">boletdex@gmail.com</a>.</p>
+
+      <p>Los consentimientos relativos a Analítica de uso y Medición publicitaria pueden modificarse en cualquier momento desde los ajustes de BoletDex. Las opciones relativas a la publicidad de Google/AdMob pueden gestionarse desde Configuración → Privacidad y anuncios. Los permisos del sistema, como ubicación o seguimiento en dispositivos Apple, pueden modificarse desde los ajustes del dispositivo. La retirada del consentimiento no afecta a la licitud del tratamiento realizado antes de su retirada.</p>
+
+      <p>Si consideras que el tratamiento de tus datos no se ajusta a la normativa vigente, tienes derecho a presentar una reclamación ante la Agencia Española de Protección de Datos (AEPD), a través de www.aepd.es, o ante la autoridad de control de tu país de residencia si esta es distinta.</p>
+
+      <h2>12. Eliminación de cuenta y datos</h2>
+
+      <p>Puedes eliminar tu cuenta y los datos personales asociados almacenados en los sistemas de BoletDex desde la propia aplicación.</p>
+
+      <p>Determinada información puede permanecer durante los plazos necesarios en proveedores que hayan intervenido previamente en una operación, como las tiendas de aplicaciones, servicios de gestión de compras o proveedores de identificación, cuando exista una obligación legal, contractual o una política de conservación aplicable. Las particularidades del tratamiento realizado por Kindwise se describen en el apartado correspondiente.</p>
+
+      <p>La eliminación puede incluir datos como cuenta, perfil, salidas, hallazgos, fotografías, ubicaciones guardadas y progreso asociado.</p>
+
+      <p>Algunos datos mínimos pueden conservarse durante el tiempo necesario para cumplir obligaciones legales, resolver incidencias, prevenir fraude o gestionar compras realizadas.</p>
+
+      <h2>13. Cambios en esta Política de privacidad</h2>
+
+      <p>Podemos actualizar esta Política de privacidad para reflejar cambios en la app, en los servicios utilizados o en requisitos legales.</p>
+
+      <p>Si los cambios son relevantes, podremos avisarte dentro de la app o mediante otros medios razonables.</p>
+
+      <p>La versión actualizada será aplicable desde la fecha indicada en esta página. Cuando los cambios afecten de forma relevante al tratamiento de datos, informaremos al usuario dentro de la aplicación o mediante otro medio razonable y, cuando sea necesario, solicitaremos nuevamente su consentimiento.</p>
+
+      <h2>14. Contacto</h2>
+
+      <p>Para cualquier duda sobre esta Política de privacidad, puedes contactar en:</p>
+
+      <p>boletdex@serperher.com</p>
+
+    </main>
+
+
+    <footer>
+
+      <div class="row">
+
+        <span>
+          © 2026 SERPERHER · BoletDex
+        </span>
+
+        <span>
+          <a href="mailto:boletdex@serperher.com">
+            boletdex@serperher.com
+          </a>
+        </span>
+
+      </div>
+
+    </footer>
+
+  </div>
+
+</body>
+</html>

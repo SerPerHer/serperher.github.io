@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ca">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>SERPERHER</title>
+
+  <meta
+    name="description"
+    content="Apps i projectes de SERPERHER, com BoletDex."
+  />
+
+  <meta name="theme-color" content="#F3E8C9" />
+
+  <style>
+    :root {
+      --text: #1f2b1e;
+      --muted: #5e695d;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+
+      display: flex;
+      align-items: center;
+
+      font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+      color: var(--text);
+
+      background:
+        radial-gradient(
+          circle at 15% 5%,
+          rgba(255, 255, 255, .75),
+          transparent 28rem
+        ),
+        linear-gradient(
+          180deg,
+          #f6ecd1 0%,
+          #eee0b9 100%
+        );
+    }
+
+    .wrap {
+      width: min(1080px, calc(100% - 32px));
+      margin: 0 auto;
+
+      padding: 72px 0;
+
+      text-align: center;
+    }
+
+    h1 {
+      font-size: clamp(44px, 7vw, 76px);
+
+      line-height: .98;
+      letter-spacing: -.055em;
+
+      margin: 0 0 22px;
+    }
+
+    .lead {
+      font-size: clamp(18px, 2vw, 22px);
+
+      line-height: 1.55;
+
+      color: var(--muted);
+
+      max-width: 650px;
+
+      margin: 0 auto 30px;
+    }
+
+    .links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      gap: 12px;
+    }
+
+    .links a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      text-decoration: none;
+
+      background: #151915;
+      color: white;
+
+      border-radius: 14px;
+
+      padding: 13px 22px;
+
+      min-width: 160px;
+
+      font-size: 17px;
+      font-weight: 700;
+
+      transition:
+        transform .18s ease,
+        opacity .18s ease;
+    }
+
+    .links a:hover {
+      transform: translateY(-2px);
+      opacity: .94;
+    }
+  </style>
+  <meta name="google-site-verification" content="PEGAR_AQUI" />
+</head>
+
+<body>
+
+  <main class="wrap">
+
+    <h1>SERPERHER</h1>
+
+    <p class="lead">
+      Apps i projectes de SERPERHER.
+    </p>
+
+    <nav class="links">
+      <a href="/boletdex/">BoletDex</a>
+      <a href="/boletdex-support/">Suport</a>
+    </nav>
+
+  </main>
+
+</body>
+</html>
